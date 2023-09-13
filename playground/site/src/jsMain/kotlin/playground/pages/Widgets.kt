@@ -26,6 +26,7 @@ import com.varabyte.kobweb.silk.components.forms.Input
 import com.varabyte.kobweb.silk.components.forms.InputGroup
 import com.varabyte.kobweb.silk.components.forms.InputSize
 import com.varabyte.kobweb.silk.components.forms.OutlinedInputVariant
+import com.varabyte.kobweb.silk.components.forms.Select
 import com.varabyte.kobweb.silk.components.forms.Switch
 import com.varabyte.kobweb.silk.components.forms.SwitchShape
 import com.varabyte.kobweb.silk.components.forms.SwitchSize
@@ -366,6 +367,18 @@ fun WidgetsPage() {
                             }
                         }
                     }
+                }
+            }
+
+            WidgetSection("Select") {
+                run {
+                    var selectedOption by remember { mutableStateOf<String?>("Two") }
+                    Select(
+                        listOf("One", "Two", "Three"),
+                        selectedOption = selectedOption,
+                        onSelected = { selectedOption = it },
+                        Modifier.width(500.px),
+                    )
                 }
             }
 

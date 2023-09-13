@@ -21,11 +21,15 @@ import com.varabyte.kobweb.silk.components.forms.CheckboxStyle
 import com.varabyte.kobweb.silk.components.forms.CheckboxVars
 import com.varabyte.kobweb.silk.components.forms.CheckedCheckboxIconContainerVariant
 import com.varabyte.kobweb.silk.components.forms.FilledInputVariant
+import com.varabyte.kobweb.silk.components.forms.FilledSelectVariant
 import com.varabyte.kobweb.silk.components.forms.FlushedInputVariant
 import com.varabyte.kobweb.silk.components.forms.InputGroupStyle
 import com.varabyte.kobweb.silk.components.forms.InputStyle
 import com.varabyte.kobweb.silk.components.forms.InputVars
 import com.varabyte.kobweb.silk.components.forms.OutlinedInputVariant
+import com.varabyte.kobweb.silk.components.forms.OutlinedSelectVariant
+import com.varabyte.kobweb.silk.components.forms.SelectOptionsStyle
+import com.varabyte.kobweb.silk.components.forms.SelectStyle
 import com.varabyte.kobweb.silk.components.forms.SwitchInputVariant
 import com.varabyte.kobweb.silk.components.forms.SwitchStyle
 import com.varabyte.kobweb.silk.components.forms.SwitchThumbStyle
@@ -226,6 +230,10 @@ fun initSilkWidgets(ctx: InitSilkContext) {
 
     mutableTheme.registerComponentStyle(HorizontalDividerStyle)
     mutableTheme.registerComponentStyle(VerticalDividerStyle)
+
+    mutableTheme.registerComponentStyle(SelectStyle)
+    mutableTheme.registerComponentVariants(OutlinedSelectVariant, FilledSelectVariant)
+    mutableTheme.registerComponentStyle(SelectOptionsStyle)
 
     mutableTheme.registerComponentStyle(SwitchStyle)
     mutableTheme.registerComponentStyle(SwitchTrackStyle)
